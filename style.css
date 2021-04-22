@@ -1,0 +1,233 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav li {
+    display: inline;
+    padding: 1.5vw;
+    grid-area: menu;
+}
+
+#header-img {
+    grid-area: logo;
+}
+
+#header {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    background-color: goldenrod;
+    width: 100vw;
+    justify-content: space-around;
+    display: grid;
+    grid-template-rows: 1f;
+    grid-template-columns: 1f 1f;
+    grid-template-areas: "logo menu";
+}
+
+.container {
+    margin: 7rem auto auto auto;
+    max-width: 50rem;
+    /*max-width: 70vw;*/
+}
+
+@media (max-width: 120vmin) {
+    #header {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "menu";
+        justify-items: center;
+        height: 8rem;
+    }
+    .container {
+        margin: 10rem auto auto auto;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9em;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    display: block;
+}
+
+#email {
+    padding: 3px 50px 3px 2px;
+    margin: auto;
+}
+
+.button {
+    background-color: rgb(255, 200, 71);
+    padding: 3px 20px;
+    margin: 10px auto;
+}
+
+#features {
+    margin-top: 4rem;
+}
+
+#items {
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas:
+        "icono encabezado"
+        "icono texto";
+}
+
+#icon {
+    padding: 0em auto;
+    margin: 1rem 0em;
+    grid-area: icono;
+}
+
+h2 {
+    line-height: 0em;
+    grid-area: encabezado;
+}
+
+#text {
+    line-height: 1.4em;
+    text-align: left;
+    grid-area: texto;
+}
+
+@media (max-width: 100vmin) {
+    #items {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "icono"
+            "encabezado"
+            "texto";
+        justify-items: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+#howItWorks {
+    display: flex;
+}
+
+#video {
+    margin: 2rem auto;
+
+}
+
+#pricing {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+#product {
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px;
+    width: 240px;
+}
+
+#grill {
+    background-color: lightgray;
+    font-weight: 600;
+    padding: 20px;
+    margin: 0px 0px;
+}
+
+#price {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    line-height: 1.8em;
+
+}
+
+button {
+    background-color: rgb(255, 200, 71);
+    padding: 10px 40px;
+    margin: 0px auto 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+#copyright {
+    font-size: .8em;
+    grid-area: copyright;
+    align-self: center;
+    margin-left: 1em;
+}
+
+#nav-footer {
+    font-size: 1em;
+    grid-area: navbar;
+    justify-self: end;
+}
+
+footer {
+    background-color: lightgray;
+    min-height: fit-content;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 25rem 25rem 1fr;
+    grid-template-areas: ". copyright navbar .";
+}
+
+@media (max-width: 60rem) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "copyright navbar";
+    }
+}
+
+@media (max-width: 120vmin) {
+
+    footer,
+    #nav-footer {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "navbar"
+            "copyright";
+        justify-self: center;
+        justify-items: center;
+    }
+
+    #copyright {
+        margin-left: 0em;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #main-doc {
+      margin-left: -10px;
+    }
+  
+    code {
+      margin-left: -20px;
+      width: 100%;
+      padding: 15px;
+      padding-left: 10px;
+      padding-right: 45px;
+      min-width: 233px;
+    }
+  }
+  
